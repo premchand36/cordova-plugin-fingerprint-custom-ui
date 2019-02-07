@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"               
-            android:src="@drawable/ic_fp_60px" />
+            android:src="@drawable/ic_fp_40px" />
 
     <TextView
         android:id="@+id/fingerprint_auth_dialog_title"
