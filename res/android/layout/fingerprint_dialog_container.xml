@@ -15,24 +15,17 @@
   ~ limitations under the License
   -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<FrameLayout
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <include layout="@layout/fingerprint_dialog_content" />
 
-    </FrameLayout>-->
-    <ImageView
-            android:id="@+id/fingerprint_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"               
-            android:src="@drawable/ic_fp_40px" />
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/buttonPanel"
