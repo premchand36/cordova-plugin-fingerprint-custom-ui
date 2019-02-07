@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-fingerprint-custom-ui",
+  "version": "1.5.0",
+  "description": "Cordova plugin to use Android fingerprint authentication API",
+  "cordova": {
+    "id": "cordova-plugin-android-fingerprint-auth",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premchand36/cordova-plugin-fingerprint-custom-ui.git"
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "android",
+    "fingerprint",
+    "authentication",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Premchand Pratti",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/premchand36/cordova-plugin-fingerprint-custom-ui/issues"
+  },
+  "homepage": "https://github.com/premchand36/cordova-plugin-fingerprint-custom-ui#readme"
+}
