@@ -18,4 +18,5 @@
     <color name="warning_color">#F9B858</color>
     <color name="hint_color">#93DBE7</color>
     <color name="success_color">#032B5E</color>
+    <color name="customButton">#e27c55</color>
 </resources>
