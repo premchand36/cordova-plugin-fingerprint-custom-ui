@@ -32,8 +32,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
         android:gravity="bottom"
@@ -50,7 +50,8 @@
             style="?android:attr/buttonBarNegativeButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/customButton"/>
+            android:background="@color/customButton"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/second_dialog_button"
