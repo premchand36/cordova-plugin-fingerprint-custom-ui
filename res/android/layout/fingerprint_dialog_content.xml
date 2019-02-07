@@ -27,7 +27,9 @@
             android:id="@+id/fingerprint_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_fp_40px" />
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"               
+            android:src="@drawable/ic_fp_60px" />
 
     <TextView
         android:id="@+id/fingerprint_auth_dialog_title"
