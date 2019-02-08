@@ -83,7 +83,6 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 .getIdentifier("fingerprint_dialog_container", "layout",
                         FingerprintAuth.packageName);
         View v = inflater.inflate(fingerprint_dialog_container_id, container, false);
-        v.setMinimumWidth((int)(displayRectangle.width() * 0.9f));
 
         // Set dialog Title
         int fingerprint_auth_dialog_title_id = getResources()
