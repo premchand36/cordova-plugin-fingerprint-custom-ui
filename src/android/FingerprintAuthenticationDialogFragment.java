@@ -85,12 +85,12 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
         View v = inflater.inflate(fingerprint_dialog_container_id, container, false);
 
         // Set dialog Title
-        int fingerprint_auth_dialog_title_id = getResources()
+        /*int fingerprint_auth_dialog_title_id = getResources()
                 .getIdentifier("fingerprint_auth_dialog_title", "id", FingerprintAuth.packageName);
         TextView dialogTitleTextView = (TextView) v.findViewById(fingerprint_auth_dialog_title_id);
         if (null != FingerprintAuth.mDialogTitle) {
             dialogTitleTextView.setText(FingerprintAuth.mDialogTitle);
-        }
+        }*/
 
         // Set dialog message
         int fingerprint_description_id = getResources()
@@ -100,7 +100,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
             dialogMessageTextView.setText(FingerprintAuth.mDialogMessage);
         }
 
-        // Set dialog hing
+        // Set dialog hint
         int fingerprint_hint_id = getResources()
                 .getIdentifier("fingerprint_status", "id", FingerprintAuth.packageName);
         TextView dialogHintTextView = (TextView) v.findViewById(fingerprint_hint_id);
@@ -143,6 +143,7 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
                 .getIdentifier("fingerprint_icon", "id", FingerprintAuth.packageName);
         int fingerprint_status_id = getResources()
                 .getIdentifier("fingerprint_status", "id", FingerprintAuth.packageName);
+				
         mFingerprintUiHelper = mFingerprintUiHelperBuilder.build(
                 (ImageView) v.findViewById(fingerprint_icon_id),
                 (TextView) v.findViewById(fingerprint_status_id), this);
