@@ -18,10 +18,10 @@
     android:id="@+id/fingerprint_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="8dp"
-    android:paddingStart="24dp"
+    android:paddingBottom="16dp"
+    android:paddingStart="4dp"
     android:paddingEnd="24dp"
-    android:paddingTop="16dp">
+    android:paddingTop="8dp">
 
     <ImageView
             android:id="@+id/fingerprint_icon"
