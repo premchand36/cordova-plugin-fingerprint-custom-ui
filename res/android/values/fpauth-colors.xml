@@ -18,6 +18,6 @@
     <color name="warning_color">#F9B858</color>
     <color name="hint_color">#93DBE7</color>
     <color name="success_color">#032B5E</color>
-    <color name="customButton">#2782ba</color>
+    <color name="customButton">#2782BA</color>
     <color name="white">#ffffff</color>
 </resources>
