@@ -167,17 +167,6 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
                 mErrorTextView.getResources().getString(fingerprint_success_id));
         
 		/*Hide cancel Button*/
-
-		/*int cancel_button_id = mContext.getResources()
-                .getIdentifier("cancel_button", "id", FingerprintAuth.packageName);
-        Button cancel_button = (Button) v.findViewById(cancel_button_id);
-        cancel_button.setVisibility(View.GONE);*/
-
-
-		/*Button cancel_button = findViewById(R.id.cancel_button);
-		cancel_button.setVisibility(View.GONE);
-
-		button */
 		button.setVisibility(View.GONE);
 
 		mIcon.postDelayed(new Runnable() {
