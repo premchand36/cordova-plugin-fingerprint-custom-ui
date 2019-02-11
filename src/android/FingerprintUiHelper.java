@@ -23,7 +23,6 @@ import android.os.CancellationSignal;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
-import android.view.View;
 
 
 /**
@@ -43,6 +42,7 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
     private CancellationSignal mCancellationSignal;
     private int mAttempts = 0;
     private static FingerprintManager.AuthenticationResult fingerprintResult;
+	private final Button button;
 
     boolean mSelfCancelled;
 
@@ -59,8 +59,8 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
             mContext = context;
         }
 
-        public FingerprintUiHelper build(ImageView icon, TextView errorTextView, Callback callback) {
-            return new FingerprintUiHelper(mContext, mFingerPrintManager, icon, errorTextView,
+        public FingerprintUiHelper build(ImageView icon, TextView errorTextView, Button cancelBtn, Callback callback) {
+            return new FingerprintUiHelper(mContext, mFingerPrintManager, icon, errorTextView, cancelBtn,
                     callback);
         }
     }
@@ -70,12 +70,13 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
      * only the {@link FingerprintUiHelperBuilder} class.
      */
     private FingerprintUiHelper(Context context, FingerprintManager fingerprintManager,
-            ImageView icon, TextView errorTextView, Callback callback) {
+            ImageView icon, TextView errorTextView,Button cancelButton, Callback callback) {
         mFingerprintManager = fingerprintManager;
         mIcon = icon;
         mErrorTextView = errorTextView;
         mCallback = callback;
         mContext = context;
+		button = cancelButton;
     }
 
     public boolean isFingerprintAuthAvailable() {
@@ -163,11 +164,22 @@ public class FingerprintUiHelper extends FingerprintManager.AuthenticationCallba
                 .getIdentifier("fingerprint_success", "string", FingerprintAuth.packageName);
         mErrorTextView.setText(
                 mErrorTextView.getResources().getString(fingerprint_success_id));
-        /**To hide cancel button On success**/
-	Button btn=(Button)findViewById(R.id.cancel_button);
-	btn.setVisibility(View.GONE);
         
-        mIcon.postDelayed(new Runnable() {
+		/*Hide cancel Button*/
+
+		/*int cancel_button_id = mContext.getResources()
+                .getIdentifier("cancel_button", "id", FingerprintAuth.packageName);
+        Button cancel_button = (Button) v.findViewById(cancel_button_id);
+        cancel_button.setVisibility(View.GONE);*/
+
+
+		/*Button cancel_button = findViewById(R.id.cancel_button);
+		cancel_button.setVisibility(View.GONE);
+
+		button */
+		button.setVisibility(View.GONE);
+
+		mIcon.postDelayed(new Runnable() {
             @Override
             public void run() {
                 mCallback.onAuthenticated(fingerprintResult);
