@@ -23,6 +23,7 @@ import android.os.CancellationSignal;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Button;
+import android.view.View;
 
 
 /**
