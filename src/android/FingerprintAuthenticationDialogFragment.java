@@ -146,7 +146,8 @@ public class FingerprintAuthenticationDialogFragment extends DialogFragment
 				
         mFingerprintUiHelper = mFingerprintUiHelperBuilder.build(
                 (ImageView) v.findViewById(fingerprint_icon_id),
-                (TextView) v.findViewById(fingerprint_status_id), this);
+                (TextView) v.findViewById(fingerprint_status_id),
+		(Button) v.findViewById(cancel_button_id), this);
         updateStage();
 
         // If fingerprint authentication is not available, switch immediately to the backup
