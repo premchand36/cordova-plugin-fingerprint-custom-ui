@@ -516,6 +516,8 @@ public class FingerprintAuth extends CordovaPlugin {
             initCipher = true;
         } catch (Exception e) {
             errorMessage = initCipherExceptionErrorPrefix + "Exception: " + e.toString();
+            createKey();
+            onAuthenticated(false);
         }
         if (!initCipher) {
             Log.e(TAG, errorMessage);
